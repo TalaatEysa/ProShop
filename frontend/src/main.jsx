@@ -10,7 +10,8 @@ import {
 import './assets/styles/bootstrap.custom.css';
 import './assets/styles//index.css';
 import App from './App.jsx';
-import HomePage from './pages/HomePage.jsx';
+import HomePage from './pages/HomePage';
+import ProductDetails from './pages/ProductDetails';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -19,9 +20,12 @@ const router = createBrowserRouter(
             element={<App />}
         >
             <Route
-                index={true}
-                path='/'
+                index
                 element={<HomePage />}
+            />
+            <Route
+                path='product/:id'
+                element={<ProductDetails />}
             />
         </Route>
     )
