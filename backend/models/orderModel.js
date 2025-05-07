@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { is } from './../../node_modules/@types/whatwg-url/lib/URL.d';
 
 const orderSchema = mongoose.Schema(
     {
