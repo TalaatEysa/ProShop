@@ -12,6 +12,8 @@ import './assets/styles//index.css';
 import App from './App.jsx';
 import HomePage from './pages/HomePage';
 import ProductDetails from './pages/ProductDetails';
+import { Provider } from 'react-redux';
+import store from './store.js';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -32,6 +34,8 @@ const router = createBrowserRouter(
 );
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <RouterProvider router={router} />
+        <Provider store={store}>
+            <RouterProvider router={router} />
+        </Provider>
     </StrictMode>
 );
